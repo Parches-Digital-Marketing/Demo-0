@@ -1,4 +1,5 @@
-$primaryBlue: rgb(58, 160, 255);
+$primaryColor: #E6170F;
+$opacityPrimaryColor: #ff1e4f;
 
 @mixin sectionTitle {
     color: black;
@@ -9,7 +10,7 @@ $primaryBlue: rgb(58, 160, 255);
     padding: 30px 0;
     text-transform: uppercase;
     & > span {
-        color: $primaryBlue;
+        color: $primaryColor;
     }
 }
 
@@ -42,6 +43,12 @@ html {
             flex-direction: column;
             min-height: 100%;
             height: min-content;
+            .scroll {
+                width: 100%;
+                height: 80%;
+                position: absolute;
+                top: 0;
+            }
         }
     }
 }
@@ -50,3 +57,4 @@ html {
 @import "./home";
 @import "./gallery";
 @import "./aboutUs";
+@import "./contact";

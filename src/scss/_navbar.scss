@@ -37,11 +37,11 @@
             .list__item {
                 cursor: pointer;
                 &:hover {
-                    color: $primaryBlue;
+                    color: $primaryColor;
                 }
                 .list__link {
                     &.active {
-                        color: $primaryBlue;
+                        color: $primaryColor;
                     }
                 }
             }

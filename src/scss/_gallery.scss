@@ -2,6 +2,9 @@
     @include section;
     height: 1300px;
     background-color: #FFFFFF;
+    padding-top: 40px;
+    position: relative;
+    box-shadow: inset 0px -20px 10px -15px rgb(50, 50, 50), inset 0px 20px 10px -15px rgb(50, 50, 50);
     .gallery__title {
         @include sectionTitle;
     }

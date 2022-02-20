@@ -2,7 +2,8 @@ import larosalogo from '../images/larosalogo.png'
 
 export default function AboutUs() {
     return (
-        <div className="about-us-container" name="about-us">
+        <div className="about-us-container">
+            <div className="scroll" name="about-us"></div>
             <h2 className="about-us__title">Sobre <span className="about-us__title-color">Nosotros</span></h2>
             <div className="about-us">
                 <p className="about-us__text">

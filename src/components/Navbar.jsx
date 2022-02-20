@@ -26,7 +26,7 @@ export default function Navbar() {
                         <Link activeClass="active" className="list__link" to="home" spy={true} isDynamic={true} smooth={true} duration={500}>Inicio</Link>
                     </li>
                     <li className="list__item">
-                        <Link activeClass="active" className="list__link" to="gallery" spy={true} smooth={true} duration={500} offset={-70}>Galería</Link>
+                        <Link activeClass="active" className="list__link" to="gallery" spy={true} smooth={true} duration={500} offset={-80}>Galería</Link>
                     </li>
                     <li className="list__item">
                         <Link activeClass="active" className="list__link" to="about-us" spy={true} smooth={true} duration={500} offset={-70}>Quienes somos</Link>

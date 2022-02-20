@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs"
+import Contact from "./components/Contact"
 import Gallery from "./components/Gallery"
 import Home from "./components/Home"
 import Navbar from "./components/Navbar"
@@ -11,6 +12,7 @@ function App() {
                 <Home />
                 <Gallery />
                 <AboutUs />
+                <Contact />
             </div>
         </div>
     )

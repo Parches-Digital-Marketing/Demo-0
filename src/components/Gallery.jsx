@@ -10,7 +10,8 @@ function Gallery() {
     const images = [{url: image2}, {url: image1}, {url: image7}, {url: image4}, {url: image5}, {url: image6}]
 
     return (
-        <div className="gallery" name="gallery">
+        <div className="gallery">
+            <div className="scroll" name="gallery"></div>
             <h2 className="gallery__title">Nuestra <span className="gallery__title-color">Galería</span></h2>
             <ul className="list">
                 {images.map((image, id) => {
