@@ -23,13 +23,13 @@ export default function Navbar() {
             <nav className="navbar">
                 <ul className="list">
                     <li className="list__item">
-                        <Link activeClass="active" className="list__link" to="home" spy={true} smooth={true} duration={500}>Inicio</Link>
+                        <Link activeClass="active" className="list__link" to="home" spy={true} isDynamic={true} smooth={true} duration={500}>Inicio</Link>
                     </li>
                     <li className="list__item">
-                        <Link activeClass="active" className="list__link" to="gallery" spy={true} smooth={true} duration={500}>Galería</Link>
+                        <Link activeClass="active" className="list__link" to="gallery" spy={true} smooth={true} duration={500} offset={-70}>Galería</Link>
                     </li>
                     <li className="list__item">
-                        <Link activeClass="active" className="list__link" to="aboutUs" spy={true} smooth={true} duration={500}>Quienes somos</Link>
+                        <Link activeClass="active" className="list__link" to="about-us" spy={true} smooth={true} duration={500} offset={-70}>Quienes somos</Link>
                     </li>
                     <li className="list__item">
                         <Link activeClass="active" className="list__link" to="contact" spy={true} smooth={true} duration={500}>Contacto</Link>

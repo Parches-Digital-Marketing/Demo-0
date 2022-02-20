@@ -1,0 +1,21 @@
+.about-us-container {
+    @include section;
+    background-color: #F1F1F1;
+    .about-us__title {
+        @include sectionTitle;
+    }
+    .about-us {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+        .about-us__text {
+            color: black;
+            font-size: 20px;
+            width: 800px;
+        }
+        .about-us__image {
+            width: 200px;
+            height: 100%;
+        }
+    }
+}

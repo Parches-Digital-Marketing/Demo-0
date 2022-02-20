@@ -40,7 +40,9 @@
                     color: $primaryBlue;
                 }
                 .list__link {
-
+                    &.active {
+                        color: $primaryBlue;
+                    }
                 }
             }
         }

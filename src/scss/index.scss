@@ -1,5 +1,23 @@
 $primaryBlue: rgb(58, 160, 255);
 
+@mixin sectionTitle {
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+    user-select: none;
+    margin: 0;
+    padding: 30px 0;
+    text-transform: uppercase;
+    & > span {
+        color: $primaryBlue;
+    }
+}
+
+@mixin section {
+    width: 100%;
+    padding-left: 400px;
+}
+
 html {
     box-sizing: border-box;
     height: 100vh;
@@ -31,3 +49,4 @@ html {
 @import "./navbar";
 @import "./home";
 @import "./gallery";
+@import "./aboutUs";
