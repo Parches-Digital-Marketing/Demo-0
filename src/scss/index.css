@@ -505,8 +505,8 @@ html body .app-container .scroll {
 .plans-container .list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 550px 550px;
-      grid-template-columns: 550px 550px;
+  -ms-grid-columns: 543px 543px;
+      grid-template-columns: 543px 543px;
   -ms-grid-rows: 100px 300px 300px;
       grid-template-rows: 100px 300px 300px;
   gap: 20px;
@@ -527,6 +527,8 @@ html body .app-container .scroll {
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid #E6170F;
+  position: relative;
+  background-color: #870000;
 }
 
 .plans-container .list .list__item:nth-child(1) {
@@ -549,7 +551,7 @@ html body .app-container .scroll {
 .plans-container .list .list__item:nth-child(1) .list__text .list__cost {
   font-size: 50px;
   font-weight: 700;
-  color: #E6170F;
+  color: white;
 }
 
 .plans-container .list .list__item:nth-child(1) .list__text .list__cost::after {
@@ -582,7 +584,9 @@ html body .app-container .scroll {
           align-items: center;
   gap: 10px;
   font-size: 30px;
-  color: black;
+  color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .plans-container .list .list__item .list__text .list__cost {
@@ -594,7 +598,7 @@ html body .app-container .scroll {
           align-items: center;
   font-size: 40px;
   font-weight: 700;
-  color: #E6170F;
+  color: white;
 }
 
 .plans-container .list .list__item .list__text .list__cost::after {
@@ -605,6 +609,16 @@ html body .app-container .scroll {
 
 .plans-container .list .list__item .list__text .list__total-cost {
   font-size: 25px;
+}
+
+.plans-container .list .list__item .list__svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.plans-container .list .list__item .list__svg .list__path {
+  fill: #C8272D;
 }
 
 .contact-container {
