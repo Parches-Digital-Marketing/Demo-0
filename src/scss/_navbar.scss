@@ -1,7 +1,6 @@
 .navbar-container {
     display: flex;
     justify-content: center;
-    gap: 500px;
     width: 100%;
     height: 80px;
     padding: 20px;
@@ -17,34 +16,101 @@
     &.active {
         background-color: #14171A;
     }
-    .logo-container {
+    .content {
         display: flex;
-        align-items: center;
-        .navbar__logo {
-            width: 70px;
-            height: auto;
-        }
-    }
-    .navbar {
-        .list {
+        justify-content: space-between;
+        width: 1100px;
+        .logo-container {
             display: flex;
             align-items: center;
-            height: 100%;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            gap: 50px;
-            .list__item {
-                cursor: pointer;
-                &:hover {
-                    color: $primaryColor;
-                }
-                .list__link {
-                    &.active {
+            .navbar__logo {
+                width: 70px;
+                height: auto;
+            }
+        }
+        .navbar {
+            .list {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 50px;
+                .list__item {
+                    cursor: pointer;
+                    &:hover {
                         color: $primaryColor;
+                    }
+                    .list__link {
+                        &.active {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+            .navbar__button {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .navbar-container {
+        gap: 0;
+        justify-content: space-between;
+        .content {
+            .logo-container {
+                .navbar__logo {
+                    width: 60px;
+                }
+            }
+            .navbar {
+                .list {
+                    display: none;
+                    &.active {
+                        display: flex;
+                        flex-direction: column;
+                        align-content: left;
+                        position: absolute;
+                        top: 80px;
+                        left: 0;
+                        padding-top: 20px;
+                        gap: 20px;
+                        background-color: $primaryColor;
+                        height: 200px;
+                        width: 100%;
+                        .list__item {
+                            &:hover {
+                                color: black;
+                            }
+                            .list__link {
+                                &.active {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+                .navbar__button {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 300px;
+                    background-color: #14171a00;
+                    border: none;
+                    cursor: pointer;
+                    .fas {
+                        color: $primaryColor;
+                        font-size: 30px;
                     }
                 }
             }
         }
     }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1700px) {
+
 }

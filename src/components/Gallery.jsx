@@ -11,17 +11,19 @@ function Gallery() {
 
     return (
         <div className="gallery">
-            <div className="scroll" name="gallery"></div>
-            <h2 className="gallery__title">Nuestra <span className="gallery__title-color">Galería</span></h2>
-            <ul className="list">
-                {images.map((image, id) => {
-                    return (
-                        <li className="list__item" key={id}>
-                            <img className="list__image" src={image.url} alt="galleryImage" />
-                        </li>
-                    )
-                })}
-            </ul>
+            <div className="section">
+                <div className="scroll" name="gallery"></div>
+                <h2 className="gallery__title">Nuestra <span className="gallery__title-color">Galería</span></h2>
+                <ul className="list">
+                    {images.map((image, id) => {
+                        return (
+                            <li className="list__item" key={id}>
+                                <img className="list__image" src={image.url} alt="galleryImage" />
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
         </div>
     )
 }

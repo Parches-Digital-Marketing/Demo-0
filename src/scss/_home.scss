@@ -42,3 +42,18 @@
         }
     }
 }
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+    .home {
+        height: 100vh;
+        .home__filter {
+        }
+        .welcome {
+            .home__text {
+                text-align: center;
+            }
+            .home__button{
+            }
+        }
+    }
+}
