@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from 'react-scroll'
 import logo from '../images/logo.png'
+import larosalogo from '../images/larosalogo.png'
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false)
@@ -18,7 +19,7 @@ export default function Navbar() {
     return (
         <section className={navbar ? "navbar-container active" : "navbar-container"}>
             <div className="logo-container">
-                <img className="navbar__logo" src={logo} alt="logo" />
+                <img className="navbar__logo" src={larosalogo} alt="logo" />
             </div>
             <nav className="navbar">
                 <ul className="list">
@@ -29,13 +30,13 @@ export default function Navbar() {
                         <Link activeClass="active" className="list__link" to="gallery" spy={true} smooth={true} duration={500} offset={-80}>Galería</Link>
                     </li>
                     <li className="list__item">
-                        <Link activeClass="active" className="list__link" to="about-us" spy={true} smooth={true} duration={500} offset={-70}>Quienes somos</Link>
+                        <Link activeClass="active" className="list__link" to="about-us" spy={true} smooth={true} duration={500} offset={-200}>Quienes somos</Link>
                     </li>
                     <li className="list__item">
-                        <Link activeClass="active" className="list__link" to="contact" spy={true} smooth={true} duration={500}>Contacto</Link>
+                        <Link activeClass="active" className="list__link" to="plans" spy={true} smooth={true} duration={500} offset={-30}>Planes</Link>
                     </li>
                     <li className="list__item">
-                        <Link activeClass="active" className="list__link" to="plans" spy={true} smooth={true} duration={500}>Planes</Link>
+                        <Link activeClass="active" className="list__link" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contacto</Link>
                     </li>
                 </ul>
             </nav>
