@@ -40,6 +40,23 @@ html body .app-container {
   position: relative;
 }
 
+html body .app-container .dark {
+  display: none;
+  background: #000;
+  opacity: 0.8;
+  z-index: 5;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+html body .app-container .dark.active {
+  display: inline-block;
+}
+
 html body .app-container .scroll-top {
   width: 50px;
   height: 50px;
@@ -274,22 +291,137 @@ html body .app-container .scroll {
   }
 }
 
-.gallery {
-  height: 1300px;
+.gallery-container {
+  height: 100%;
   background-color: #FFFFFF;
   position: relative;
+  padding-bottom: 50px;
   -webkit-box-shadow: inset 0px -20px 10px -15px #323232, inset 0px 20px 10px -15px #323232;
           box-shadow: inset 0px -20px 10px -15px #323232, inset 0px 20px 10px -15px #323232;
 }
 
-.gallery .section {
+.gallery-container .carousel-root {
+  width: 100%;
+  height: 120%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 6;
+}
+
+.gallery-container .carousel-root .carousel-slider {
+  width: 1000px !important;
+  height: 500px !important;
+  overflow-x: initial;
+}
+
+.gallery-container .carousel-root .carousel-slider #close-button {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  border-radius: 300px;
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-container .carousel-root .carousel-slider #close-button:hover {
+  color: #E6170F;
+}
+
+.gallery-container .carousel-root .carousel-slider #close-button::before {
+  content: "X";
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.gallery-container .carousel-root .carousel-slider .control-dots .dot {
+  width: 15px;
+  height: 15px;
+}
+
+.gallery-container .carousel-root .carousel-slider .control-dots .dot:hover {
+  background-color: #E6170F;
+}
+
+.gallery-container .carousel-root .carousel-slider .slider-wrapper .slider li div img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 500px !important;
+}
+
+.gallery-container .carousel-root .carousel-slider .control-arrow {
+  opacity: 1;
+}
+
+.gallery-container .carousel-root .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery-container .carousel-root .carousel .thumbs-wrapper .thumbs li {
+  border: none;
+  border-radius: 10px;
+  width: 200px !important;
+  height: 200px !important;
+  cursor: pointer;
+}
+
+.gallery-container .carousel-root .carousel .thumbs-wrapper .thumbs li:hover {
+  opacity: .5;
+}
+
+.gallery-container .carousel-root .carousel .thumbs-wrapper .thumbs li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.gallery-container .section {
   width: 100%;
   padding-left: 400px;
   padding-top: 40px;
-  width: 1120px;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.gallery .section .gallery__title {
+.gallery-container .section .scroll {
+  z-index: -1;
+}
+
+.gallery-container .section .gallery {
+  max-width: 1106px;
+}
+
+.gallery-container .section .gallery .gallery__title {
   color: black;
   font-size: 40px;
   font-weight: 700;
@@ -302,91 +434,66 @@ html body .app-container .scroll {
   text-transform: uppercase;
 }
 
-.gallery .section .gallery__title > span {
+.gallery-container .section .gallery .gallery__title > span {
   color: #E6170F;
 }
 
-.gallery .section .list {
+.gallery-container .section .gallery .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  list-style: none;
-  max-width: 1150px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   gap: 10px;
 }
 
-.gallery .section .list .list__item:nth-child(1) {
-  width: 300px;
-  height: 400px;
+.gallery-container .section .gallery .list .list__item {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
 }
 
-.gallery .section .list .list__item:nth-child(1) .list__image {
+.gallery-container .section .gallery .list .list__item:hover {
+  opacity: .6;
+}
+
+.gallery-container .section .gallery .list .list__item .list__image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
 }
 
-.gallery .section .list .list__item:nth-child(2) {
-  width: 400px;
-  height: 400px;
-}
-
-.gallery .section .list .list__item:nth-child(2) .list__image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.gallery .section .list .list__item:nth-child(3) {
-  width: 300px;
-  height: 400px;
-}
-
-.gallery .section .list .list__item:nth-child(3) .list__image {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.gallery .section .list .list__item .list__image {
-  border-radius: 30px;
-  -webkit-transition: -webkit-transform .25s;
-  transition: -webkit-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s;
-}
-
-.gallery .section .list .list__item .list__image:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-@media screen and (min-width: 320px) and (max-width: 1700px) {
-  .gallery {
+@media screen and (min-width: 320px) and (max-width: 1269px) {
+  .gallery-container {
     height: 100%;
   }
-  .gallery .section {
+  .gallery-container .carousel-root .carousel-slider {
+    width: 100% !important;
+    height: 600px !important;
+  }
+  .gallery-container .section {
     width: 100%;
     padding: 100px 10px;
     padding-top: 20px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .gallery .section .list .list__item .list__image {
+  .gallery-container .section .gallery {
+    min-width: 100%;
+  }
+  .gallery-container .section .gallery .list {
+    gap: 10px;
+    padding-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gallery-container .section .gallery .list .list__item .list__image {
     width: 100%;
   }
-  .gallery .section .list .list__item .list__image:hover {
+  .gallery-container .section .gallery .list .list__item .list__image:hover {
     -webkit-transform: scale(1.01);
             transform: scale(1.01);
   }
@@ -399,11 +506,26 @@ html body .app-container .scroll {
   height: 500px;
   padding-top: 40px;
   padding-bottom: 40px;
+  padding-left: 0;
   position: relative;
   background: #f1f1f1 url(../images/aboutImage.png) no-repeat fixed right center/contain;
 }
 
-.about-us-container .about-us__title {
+.about-us-container .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.about-us-container .section .about-us {
+  min-width: 1106px;
+}
+
+.about-us-container .section .about-us .about-us__title {
   color: black;
   font-size: 40px;
   font-weight: 700;
@@ -416,11 +538,11 @@ html body .app-container .scroll {
   text-transform: uppercase;
 }
 
-.about-us-container .about-us__title > span {
+.about-us-container .section .about-us .about-us__title > span {
   color: #E6170F;
 }
 
-.about-us-container .about-us {
+.about-us-container .section .about-us .about-us-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,13 +552,13 @@ html body .app-container .scroll {
   gap: 320px;
 }
 
-.about-us-container .about-us .about-us__text {
+.about-us-container .section .about-us .about-us-info .about-us__text {
   color: black;
   font-size: 20px;
   width: 500px;
 }
 
-.about-us-container .about-us .about-us__image {
+.about-us-container .section .about-us .about-us-info .about-us__image {
   width: 200px;
   height: 100%;
   -webkit-box-shadow: 0px 0px 20px 4px black;
@@ -454,17 +576,20 @@ html body .app-container .scroll {
     background-color: #333333;
     background-image: none;
   }
-  .about-us-container .about-us__title {
+  .about-us-container .section .about-us {
+    min-width: 100%;
+  }
+  .about-us-container .section .about-us .about-us__title {
     color: white;
   }
-  .about-us-container .about-us {
+  .about-us-container .section .about-us .about-us-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 40px;
   }
-  .about-us-container .about-us .about-us__text {
+  .about-us-container .section .about-us .about-us-info .about-us__text {
     font-size: 15px;
     color: white;
     width: 100%;
@@ -472,19 +597,33 @@ html body .app-container .scroll {
 }
 
 .plans-container {
-  width: 100%;
-  padding-left: 400px;
   background-color: #F1F1F1;
-  height: 900px;
-  padding-top: 40px;
-  padding-bottom: 40px;
   position: relative;
   color: black;
   -webkit-box-shadow: inset 0px 20px 10px -15px #323232;
           box-shadow: inset 0px 20px 10px -15px #323232;
 }
 
-.plans-container .plans__title {
+.plans-container .section {
+  width: 100%;
+  padding-left: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 900px;
+  padding-left: 0;
+}
+
+.plans-container .section .plans {
+  max-width: 1106px;
+}
+
+.plans-container .section .plans .plans__title {
   color: black;
   font-size: 40px;
   font-weight: 700;
@@ -498,11 +637,11 @@ html body .app-container .scroll {
   margin: 0;
 }
 
-.plans-container .plans__title > span {
+.plans-container .section .plans .plans__title > span {
   color: #E6170F;
 }
 
-.plans-container .list {
+.plans-container .section .plans .list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 543px 543px;
@@ -516,7 +655,7 @@ html body .app-container .scroll {
   text-transform: uppercase;
 }
 
-.plans-container .list .list__item {
+.plans-container .section .plans .list .list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,13 +670,13 @@ html body .app-container .scroll {
   background-color: #870000;
 }
 
-.plans-container .list .list__item:nth-child(1) {
+.plans-container .section .plans .list .list__item:nth-child(1) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
 }
 
-.plans-container .list .list__item:nth-child(1) .list__text {
+.plans-container .section .plans .list .list__item:nth-child(1) .list__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,27 +687,27 @@ html body .app-container .scroll {
   gap: 20px;
 }
 
-.plans-container .list .list__item:nth-child(1) .list__text .list__cost {
+.plans-container .section .plans .list .list__item:nth-child(1) .list__text .list__cost {
   font-size: 50px;
   font-weight: 700;
   color: white;
 }
 
-.plans-container .list .list__item:nth-child(1) .list__text .list__cost::after {
+.plans-container .section .plans .list .list__item:nth-child(1) .list__text .list__cost::after {
   content: "";
   margin-left: 0;
 }
 
-.plans-container .list .list__item:nth-child(2) .list__text .list__cost {
+.plans-container .section .plans .list .list__item:nth-child(2) .list__text .list__cost {
   font-size: 50px;
 }
 
-.plans-container .list .list__item:nth-child(2) .list__text .list__cost::after {
+.plans-container .section .plans .list .list__item:nth-child(2) .list__text .list__cost::after {
   content: "";
   margin-left: 0;
 }
 
-.plans-container .list .list__item .list__text {
+.plans-container .section .plans .list .list__item .list__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -589,7 +728,7 @@ html body .app-container .scroll {
   z-index: 2;
 }
 
-.plans-container .list .list__item .list__text .list__cost {
+.plans-container .section .plans .list .list__item .list__text .list__cost {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,24 +740,79 @@ html body .app-container .scroll {
   color: white;
 }
 
-.plans-container .list .list__item .list__text .list__cost::after {
+.plans-container .section .plans .list .list__item .list__text .list__cost::after {
   content: "c/u";
   font-size: 20px;
   margin-left: 10px;
 }
 
-.plans-container .list .list__item .list__text .list__total-cost {
+.plans-container .section .plans .list .list__item .list__text .list__total-cost {
   font-size: 25px;
 }
 
-.plans-container .list .list__item .list__svg {
+.plans-container .section .plans .list .list__item .list__svg {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.plans-container .list .list__item .list__svg .list__path {
+.plans-container .section .plans .list .list__item .list__svg .list__path {
   fill: #C8272D;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1000px) {
+  .plans-container .section {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .plans-container .section .plans {
+    width: 100%;
+  }
+  .plans-container .section .plans .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .plans-container .section .plans .list .list__item {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1700px) {
+  .plans-container .section {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .plans-container .section .plans {
+    width: 100%;
+  }
+  .plans-container .section .plans .list {
+    -ms-grid-columns: minmax(300px, 543px) minmax(300px, 543px);
+        grid-template-columns: minmax(300px, 543px) minmax(300px, 543px);
+  }
+  .plans-container .section .plans .list .list__item {
+    min-width: 300px;
+    max-width: 543px;
+    max-height: 300px;
+    padding: 10px;
+  }
+  .plans-container .section .plans .list .list__item:nth-child(1) {
+    max-width: 100%;
+  }
 }
 
 .contact-container {
@@ -647,6 +841,7 @@ html body .app-container .scroll {
 
 .contact-container .section .scroll {
   z-index: -1;
+  left: 0;
 }
 
 .contact-container .section .contact__title {

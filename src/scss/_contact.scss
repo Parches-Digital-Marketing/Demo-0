@@ -13,6 +13,7 @@
         padding-top: 20px;
         .scroll {
             z-index: -1;
+            left: 0;
         }
         .contact__title {
             @include sectionTitle;
@@ -73,11 +74,6 @@
             padding: 10px;
             padding-bottom: 80px;
             box-sizing: border-box;
-            
-            .scroll {
-            }
-            .contact__title {
-            }
             .social-media {
                 width: 100%;
                 .list {
@@ -87,10 +83,6 @@
                             display: grid;
                             grid-template-columns: 120px 150px;
                             gap: 20px;
-                            .list__image {
-                            }
-                            .list__name {
-                            }
                         }
                     }
                 }

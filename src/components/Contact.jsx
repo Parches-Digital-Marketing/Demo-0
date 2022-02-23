@@ -1,5 +1,5 @@
-import facebookLogo from '../images/facebookLogo.png'
 import instagramLogo from '../images/instagramLogo.png'
+import facebookLogo from '../images/facebookLogo.png'
 import whatsAppLogo from '../images/whatsAppLogo.png'
 
 export default function Contact() {
