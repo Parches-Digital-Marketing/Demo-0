@@ -11,6 +11,8 @@ import image7 from '../images/image7.jpg';
 import image8 from '../images/image8.jpg';
 import image9 from '../images/image9.jpg';
 import image10 from '../images/image10.jpg';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function Gallery() {
     const images = [{url: image1}, {url: image2}, {url: image3}, {url: image4}, {url: image5}, {url: image6}, {url: image7}, {url: image8}, {url: image9}, {url: image10}]
@@ -18,6 +20,17 @@ function Gallery() {
 
     return (
         <div className="gallery-container">
+
+            {/* <CarouselProvider naturalSlideWidth={100} naturalSlideHeight={125} totalSlides={3}>
+                <Slider>
+                    <Slide index={0}><Image src={image1}/></Slide>
+                    <Slide index={1}><Image src={image2}/></Slide>
+                    <Slide index={2}><Image src={image3}/></Slide>
+                </Slider>
+                <ButtonBack>Back</ButtonBack>
+                <ButtonNext>Next</ButtonNext>
+            </CarouselProvider> */}
+
             {
                 carousel && 
                     <Carousel emulateTouch useKeyboardArrows styles={styles}>
@@ -32,7 +45,6 @@ function Gallery() {
             }
             <div className="section">
                 <div className="scroll" name="gallery"></div>
-                
                 <div className="gallery">
                     <h2 className="gallery__title">Nuestra <span className="gallery__title-color">Galería</span></h2>
                     <ul className="list">

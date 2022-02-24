@@ -1,11 +1,11 @@
-import { Link } from 'react-scroll'
-import AboutUs from "./components/AboutUs"
-import Contact from "./components/Contact"
-import Gallery from "./components/Gallery"
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import Plans from "./components/Plans"
-import Home from "./components/Home"
+import { Link } from 'react-scroll';
+import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
+import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Plans from "./components/Plans";
+import Home from "./components/Home";
 
 function App() {
     return (
