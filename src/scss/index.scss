@@ -1,5 +1,6 @@
 $primaryColor: #E6170F;
 $opacityPrimaryColor: #ff1e4f;
+$maxSectionWidth: 1100px;
 
 @mixin sectionTitle {
     color: black;
@@ -12,11 +13,6 @@ $opacityPrimaryColor: #ff1e4f;
     & > span {
         color: $primaryColor;
     }
-}
-
-@mixin section {
-    width: 100%;
-    padding-left: 400px;
 }
 
 html {

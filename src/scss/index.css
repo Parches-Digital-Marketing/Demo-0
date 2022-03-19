@@ -402,7 +402,6 @@ html body .app-container .scroll {
 
 .gallery-container .section {
   width: 100%;
-  padding-left: 400px;
   padding-top: 40px;
   padding-left: 0;
   display: -webkit-box;
@@ -475,7 +474,7 @@ html body .app-container .scroll {
   }
   .gallery-container .section {
     width: 100%;
-    padding: 100px 10px;
+    padding: 0 10px;
     padding-top: 20px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -501,7 +500,6 @@ html body .app-container .scroll {
 
 .about-us-container {
   width: 100%;
-  padding-left: 400px;
   background-color: #F1F1F1;
   height: 500px;
   padding-top: 40px;
@@ -606,7 +604,6 @@ html body .app-container .scroll {
 
 .plans-container .section {
   width: 100%;
-  padding-left: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -816,8 +813,6 @@ html body .app-container .scroll {
 }
 
 .contact-container {
-  width: 100%;
-  padding-left: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -832,10 +827,17 @@ html body .app-container .scroll {
           box-shadow: inset 0px 20px 10px -15px #323232;
   position: relative;
   z-index: 3;
+  padding: 0;
 }
 
 .contact-container .section {
-  width: 1120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   padding-top: 20px;
 }
 
@@ -844,7 +846,11 @@ html body .app-container .scroll {
   left: 0;
 }
 
-.contact-container .section .contact__title {
+.contact-container .section .contact {
+  max-width: 1100px;
+}
+
+.contact-container .section .contact .contact__title {
   color: black;
   font-size: 40px;
   font-weight: 700;
@@ -858,18 +864,20 @@ html body .app-container .scroll {
   margin: 0;
 }
 
-.contact-container .section .contact__title > span {
+.contact-container .section .contact .contact__title > span {
   color: #E6170F;
 }
 
-.contact-container .section .social-media {
+.contact-container .section .contact .social-media {
   max-width: 1150px;
 }
 
-.contact-container .section .social-media .list {
+.contact-container .section .contact .social-media .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -882,11 +890,11 @@ html body .app-container .scroll {
   margin-bottom: 60px;
 }
 
-.contact-container .section .social-media .list .list__link {
+.contact-container .section .contact .social-media .list .list__link {
   text-decoration: none;
 }
 
-.contact-container .section .social-media .list .list__link .list__item {
+.contact-container .section .contact .social-media .list .list__link .list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,7 +905,7 @@ html body .app-container .scroll {
   color: black;
 }
 
-.contact-container .section .social-media .list .list__link .list__item .list__image {
+.contact-container .section .contact .social-media .list .list__link .list__item .list__image {
   width: 100px;
   height: 100%;
   -webkit-transition: -webkit-transform .25s ease;
@@ -906,22 +914,24 @@ html body .app-container .scroll {
   transition: transform .25s ease, -webkit-transform .25s ease;
 }
 
-.contact-container .section .social-media .list .list__link .list__item .list__image:hover {
+.contact-container .section .contact .social-media .list .list__link .list__item .list__image:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.contact-container .section .social-media .list .list__link .list__item .list__name {
+.contact-container .section .contact .social-media .list .list__link .list__item .list__name {
   font-size: 16px;
   font-weight: 700;
   color: #E6170F;
 }
 
-.contact-container .section .social-media .list .list__link .list__item .list__name:hover {
+.contact-container .section .contact .social-media .list .list__link .list__item .list__name:hover {
   color: #ff6b6b;
 }
 
-.contact-container .section .map {
+.contact-container .section .contact .map {
+  width: 100%;
+  height: 500px;
   border: 0;
   -webkit-box-shadow: 0 0 10px .1px black;
           box-shadow: 0 0 10px .1px black;
@@ -940,23 +950,17 @@ html body .app-container .scroll {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .contact-container .section .social-media {
+  .contact-container .section .contact .social-media {
     width: 100%;
   }
-  .contact-container .section .social-media .list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .contact-container .section .social-media .list .list__link .list__item {
+  .contact-container .section .contact .social-media .list .list__link .list__item {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 120px 150px;
         grid-template-columns: 120px 150px;
     gap: 20px;
   }
-  .contact-container .section .map {
+  .contact-container .section .contact .map {
     width: 100%;
     height: 200px;
     margin: 0;

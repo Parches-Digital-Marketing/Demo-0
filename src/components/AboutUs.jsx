@@ -1,4 +1,4 @@
-import larosalogo from '../images/larosalogo.png'
+import logo from '../images/logo.png'
 
 export default function AboutUs() {
     return (
@@ -14,7 +14,7 @@ export default function AboutUs() {
                             <br />
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, facilis! Exercitationem voluptatibus eligendi deleniti eius. Eveniet debitis nobis iusto consequuntur praesentium sit modi ratione assumenda? Perferendis officiis rem aperiam corrupti.
                         </p>
-                        <img className="about-us__image" src={larosalogo} alt="logo" />
+                        <img className="about-us__image" src={logo} alt="logo" />
                     </div>
                 </div>
             </div>
